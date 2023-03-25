@@ -1,0 +1,15 @@
+{
+  "name": "Lite Browser",
+  "main": "main.js",
+  "version": "1.3.0",
+  "description": "A lite Browser",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^22.0.0",
+    "electron-packager": "^17.1.1"
+  }
+}
