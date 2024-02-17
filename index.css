@@ -1,34 +1,49 @@
-html {
-    zoom: 0.9;
-}
-
 body {
     width: 100%;
-    margin: 0 auto;
-    /* margin-top: 0px; */
     height: 100%;
+    margin: 0 auto;
     background-size: 100% 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-image: url(background.jpg);
 }
 
-.search-div {
+#main {
     width: 100%;
     text-align: center;
-    margin-top: 8%;
-    display: inline-block;
+    position: absolute;
+    top: 15%;
 }
 
-h1 {
-    color: rgb(71, 195, 195);
-    size: 200px;
+#engine {
+    width: 50%;
+    text-align: left;
+    margin: 0 auto;
 }
 
-input {
+h1,h4 {
+    color: #47c3c3;
+}
+
+#word {
+    margin-top: -5px;
     width: 50%;
     height: 30px;
     border: none;
     font-size: 18px;
     border-radius: 10px;
+}
+
+#bookmark {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 6px;
+    background-color: #47c3c3ae;
+}
+#bookmark button {
+    margin-top: 0.5em;
+}
+#bookmark-index a{
+    margin-top: 10px;
 }
