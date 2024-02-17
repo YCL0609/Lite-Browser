@@ -62,19 +62,30 @@ app.whenReady().then(() => {
     accelerator: 'F12',
     role: 'toggleDevTools'
   }, {
-    label: 'Print Current URL',
+    label: '显示当前网址 (F10)',
+    accelerator: 'F10',
     click: () => {
       const currentWindow = BrowserWindow.getFocusedWindow();
       win.webContents.executeJavaScript(`
-      localStorage.setItem('page','`+ currentWindow.webContents.getURL() +`')`);
+      localStorage.setItem('page','`+ currentWindow.webContents.getURL() + `')`);
       const newwin = new BrowserWindow({
-        // 设置主窗口初始尺寸
         width: 500,
         height: 200,
       })
-      // 加载主页
       newwin.setMenu(null)
       newwin.loadFile('url.html');
+    }
+  }, {
+    label: '在独立进程中打开 (F9)',
+    accelerator: 'F9',
+    click: () => {
+      const currentWindow = BrowserWindow.getFocusedWindow();
+      url = currentWindow.webContents.getURL();
+      const newwin = new BrowserWindow({
+        width: 1024,
+        height: 600,
+      })
+      newwin.loadURL(url);
     }
   }, {
     label: '关闭菜单(全局)',
