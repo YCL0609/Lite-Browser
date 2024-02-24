@@ -1,16 +1,15 @@
 {
-  "devDependencies": {
-    "electron": "^28.2.3",
-    "electron-packager": "^17.1.2"
-  },
   "name": "litebrowser",
   "version": "1.4.0",
   "description": "A lite website browser",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "build": "electron-packager ./ LiteBrowser --win --arch=x64 --out ../outputs "
+    "start": "electron ."
   },
   "author": "YCL",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "asar": "^3.2.0",
+    "electron": "^29.0.1"
+  }
 }
